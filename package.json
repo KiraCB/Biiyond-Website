@@ -1,0 +1,16 @@
+{
+  "name": "biiyond-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "biiyond.com — static site with a scroll-scrubbed film. No runtime dependencies.",
+  "type": "module",
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "build:preview": "PREVIEW=1 node scripts/build.mjs",
+    "dev": "node scripts/build.mjs && node scripts/serve.mjs",
+    "serve": "node scripts/serve.mjs",
+    "frames": "python3 tools/extract_frames.py",
+    "check": "node scripts/build.mjs && node scripts/check.mjs"
+  }
+}

@@ -1,0 +1,257 @@
+{
+  "_readme": "All website copy, links and media references live here. Edit this file, then run `npm run build`. Copy is taken verbatim from the approved prototype (claude.ai artifact f477cbf3, Aug 2026). Anything wrapped in [square brackets] must be confirmed before launch — the build prints a warning for each one.",
+
+  "site": {
+    "name": "Biiyond",
+    "legalName": "Biiyond Production Pvt. Ltd.",
+    "regNo": "280402/078/079",
+    "url": "https://biiyond.com",
+    "description": "Biiyond Production Pvt. Ltd. — a small company in Nepal that makes video for the world, and teaches people how to do it.",
+    "ogImage": "media/og/og-1200x630.jpg",
+    "address": "Baluwatar–4, Kathmandu Metropolitan City, Nepal",
+    "phone": "+977 9705415380",
+    "emails": {
+      "general": "info@biiyond.com",
+      "careers": "careers@biiyond.com"
+    },
+    "external": {
+      "leafcutStudio": { "label": "Leafcut Studio", "url": "https://leafcut.studio", "live": false },
+      "leafcutAcademy": { "label": "Leafcut Academy", "url": "https://leafcut.academy", "live": false }
+    },
+    "year": "2026"
+  },
+
+  "nav": [
+    { "label": "Thinking", "href": "thinking/" },
+    { "label": "Careers", "href": "careers/" },
+    { "label": "Investors", "href": "investors/" },
+    { "label": "Contact", "href": "contact/" }
+  ],
+
+  "home": {
+    "title": "Biiyond — Made in Nepal",
+    "film": {
+      "_readme": "The scroll film. `beats` map pinned scroll distance (in viewport heights) to frame ranges. A beat with from === to is a still-frame hold. Chapters are real HTML laid over the film; `in`/`out` are positions on the same viewport-height timeline.",
+      "skipLabel": "Skip the film",
+      "travel": 7.6,
+      "beats": [
+        { "from": 0.00, "to": 0.70, "clip": "A", "t": [0, 0],       "_": "hold — the line, opening copy" },
+        { "from": 0.70, "to": 1.00, "clip": "A", "t": [0, 0.12],    "_": "the line stirs as the headline leaves" },
+        { "from": 1.00, "to": 2.45, "clip": "A", "t": [0.12, 0.62], "_": "transition — the line rises into the ridge, no copy (the key moment gets the most scroll)" },
+        { "from": 2.45, "to": 2.95, "clip": "A", "t": [0.62, 1],    "_": "the range settles out of the dark" },
+        { "from": 2.95, "to": 5.00, "clip": "B", "t": [0, 1],       "_": "first light on the summit — Made in Nepal" },
+        { "from": 5.00, "to": 6.75, "clip": "C", "t": [0, 1],       "_": "rise above the clouds, no copy until the horizon forms" },
+        { "from": 6.75, "to": 7.60, "clip": "C", "t": [1, 1],       "_": "hold — the horizon line, closing copy" }
+      ],
+      "chapters": [
+        {
+          "id": "open",
+          "kind": "hero",
+          "in": 0, "out": 0.85,
+          "label": "Biiyond Production Pvt. Ltd.",
+          "title": "We build the kind of company we <em>wanted</em> to work at.",
+          "poster": "media/stills/key-01-line.jpg",
+          "alt": "A single thin line of light across darkness."
+        },
+        {
+          "id": "nepal",
+          "kind": "chapter",
+          "in": 3.2, "out": 4.75,
+          "label": "[01] Where we are",
+          "title": "Made in Nepal.",
+          "body": [
+            "We started during lockdown, with one laptop and an account on a freelance marketplace. We are still here.",
+            "Nepal is not a discount. It is where the people we trust happen to live. What we ship goes out at the standard the world expects."
+          ],
+          "poster": "media/stills/key-03-first-light.jpg",
+          "alt": "First light touching a single Himalayan summit above dark valleys."
+        },
+        {
+          "id": "idea",
+          "kind": "chapter",
+          "in": 6.15, "out": 99,
+          "label": "[02] The whole idea",
+          "title": "Almost everything good is made by a small group of people who cared more than they had to.",
+          "body": [
+            "That is the whole idea. Find those people. Give them room, and something solid to stand on. Then let them build.",
+            "Today that is a studio and a school. We are not in a hurry to be big. We are in a hurry to be good."
+          ],
+          "poster": "media/stills/key-04-above-clouds.jpg",
+          "alt": "Above a sea of clouds at dawn; one line of light runs along the horizon."
+        }
+      ]
+    },
+    "marquee": ["Made in Nepal", "Shipped to the world"],
+    "tree": {
+      "label": "Two, so far",
+      "note": "Two branches today. The rest are drawn and waiting.",
+      "nodes": [
+        { "ext": "leafcutStudio", "title": "Leafcut Studio", "sub": "Video production", "icon": "media/brand/leaf-studio.png" },
+        { "ext": "leafcutAcademy", "title": "Leafcut Academy", "sub": "[Opening 2026]", "icon": "media/brand/leaf-academy.png" }
+      ],
+      "futureLabel": "Next"
+    },
+    "careersCta": {
+      "title": "If you make things, we should talk.",
+      "body": "Editors, producers, designers, and people who are good at running things. We care more about how you think, and whether you finish, than where you studied.",
+      "link": { "label": "See what we look for", "href": "careers/" }
+    }
+  },
+
+  "thinking": {
+    "title": "How we think — Biiyond",
+    "header": {
+      "label": "How we think",
+      "title": "Not a mission statement.",
+      "body": "Just the things we have found to be true so far.",
+      "image": "media/stills/thinking-lokta.jpg"
+    },
+    "marquee": ["People first", "Then systems", "Then scale"],
+    "beliefsA": [
+      { "n": "[01]", "title": "People first, then systems, then scale.", "body": "Most companies do this backwards and wonder why nothing holds. We hire slowly, write down how the work is done, and only then grow." },
+      { "n": "[02]", "title": "Craft is not a luxury.", "body": "\"Good enough\" is a decision to be forgettable. The extra hour on the edit is the difference between a company people come back to and one they replace." },
+      { "n": "[03]", "title": "Reliability is a creative act.", "body": "Anyone can be brilliant occasionally. Being good every time, on the date you promised, is much rarer. We would rather be trusted than admired." }
+    ],
+    "breakImage": "media/stills/break-road-line.jpg",
+    "beliefsB": [
+      { "n": "[04]", "title": "We build assets, not income.", "body": "Money that arrives this month is useful. Something that keeps producing after you stop pushing it is worth far more. Every decision here is judged on which one it is." },
+      { "n": "[05]", "title": "Teach what you know.", "body": "A skill that lives in one person is fragile. A skill written down and taught to ten people is a company. That is why we built a school." },
+      { "n": "[06]", "title": "Nobody should have to guess.", "body": "What the work is, how it is judged, and what the next step takes — all of it is written down, and anyone here can read it." },
+      { "n": "[07]", "title": "Stay close to the ground.", "body": "We are in Kathmandu. The work goes out to the world. Nothing about that is a disadvantage as long as the work is honest and the communication is clear." }
+    ],
+    "vipassana": {
+      "_readme": "HELD DELIBERATELY. Do not set show:true until the policy has been announced inside the company.",
+      "show": false,
+      "title": "Ten days, paid, to sit still.",
+      "body": "Anyone here, in any role, can take ten days of paid leave to sit a Vipassana course. Bring the confirmation email. That is the whole process.",
+      "image": "media/stills/vipassana-lake.jpg"
+    },
+    "twoKinds": {
+      "label": "Where this goes",
+      "title": "There are two kinds of work.",
+      "k1": { "title": "Work for other people", "body": "Stops paying the day you stop doing it." },
+      "k2": { "title": "Work we own", "body": "Keeps paying after everyone has gone home." },
+      "left": "Leafcut is the first kind. It is a good business, it is the one we are best at, and it pays for everything else here.",
+      "right": [
+        "The second kind is what we are building next. Small teams, three or four people, something with our own name on it that we keep.",
+        "We will start when there is somebody worth handing it to. That is the only condition."
+      ]
+    },
+    "closer": {
+      "title": "We build the kind of company we <em>wanted</em> to work at.",
+      "body": "Everything above is only what that means in practice."
+    }
+  },
+
+  "careers": {
+    "title": "Careers — Biiyond",
+    "header": {
+      "label": "Work with us",
+      "title": "We are almost always short of good people.",
+      "body": "A small company in Nepal that makes video for the world, and teaches people how to do it.",
+      "image": "media/stills/careers-valley-night.jpg"
+    },
+    "marquee": ["Editors", "Producers", "Designers", "People who run things"],
+    "like": {
+      "label": "What it is like here",
+      "title": "We are direct about work and kind about people.",
+      "body": [
+        "The clients are on the other side of the world, the deadlines are actual deadlines, and the review before anything ships is a real one.",
+        "We say what needs fixing, quickly, and then we fix it. Nobody here has to guess what their manager thinks.",
+        "We hire for the long term, which means we are slow to make offers and slow to let people go."
+      ]
+    },
+    "look": {
+      "label": "What we look for",
+      "rows": [
+        { "n": "[01]", "title": "Honesty first.", "body": "Everything else can be taught. This cannot." },
+        { "n": "[02]", "title": "People who finish.", "body": "Starting is common. Finishing — properly, on time, at standard — is rare, and it is the whole job." },
+        { "n": "[03]", "title": "Curiosity.", "body": "Our tools change every few months. The people who do well here find that exciting rather than exhausting." },
+        { "n": "[04]", "title": "Comfort with systems.", "body": "We write things down and we follow them. If process feels like a cage to you, this is the wrong company." }
+      ],
+      "note": "We care very little about which college you attended."
+    },
+    "grow": {
+      "label": "How you grow here",
+      "title": "Every role has a next step, and the next step is written down.",
+      "body": [
+        "Each track has levels. Each level says what you must be able to do, and what it takes to reach the one above it. Salary sits in a band attached to the level.",
+        "Reviewed twice a year, on fixed dates, against those criteria — not against how loudly anyone asks."
+      ],
+      "tracks": [
+        { "name": "Editing", "levels": ["Intern", "Editor I", "Editor II", "Senior Editor", "Instructor"] },
+        { "name": "Delivery", "levels": ["Associate", "Project Manager", "Lead PM", "Head of Delivery"] },
+        { "name": "Growth", "levels": ["Junior Manager", "Manager", "Brand & Growth", "Head of Growth"] },
+        { "name": "Commercial", "levels": ["Closer", "Senior Closer", "Head of Commercial"] },
+        { "name": "Academy", "levels": ["Coordinator", "Academy Manager", "Academy Head"] }
+      ],
+      "note": "Drag or scroll · five tracks · reviewed twice a year"
+    },
+    "closer": {
+      "title": "We are hiring editors.",
+      "body": [
+        "And producers, project managers, designers, and people who are good at running things. If you are good at any of it, write to us — we would rather meet you early than advertise late.",
+        "Send your work and a short note. What you have made, and what you would like to make next. A portfolio matters more than a CV."
+      ],
+      "after": "Every application gets read. We reply either way."
+    }
+  },
+
+  "investors": {
+    "title": "Investors — Biiyond",
+    "header": {
+      "label": "For investors",
+      "title": "How we think about capital.",
+      "body": "Biiyond is owner-operated and funded from what it earns. This page exists for the conversations that come later.",
+      "image": "media/stills/investors-terraces.jpg"
+    },
+    "marquee": ["Patient", "Owner-operated", "Assets before income"],
+    "structure": {
+      "label": "The structure",
+      "title": "One company, two brands, no outside shareholders.",
+      "body": [
+        "Biiyond Production Pvt. Ltd. is a private limited company registered in Kathmandu. Leafcut is a trading brand of it, not a separate entity.",
+        "The company is held by its founders. There is no outside capital on the register today, and no debt against the operating business."
+      ]
+    },
+    "allocate": {
+      "label": "How we allocate",
+      "rows": [
+        { "n": "[01]", "title": "We allocate, we do not operate.", "body": "The job is deciding where the next rupee goes, not running the floor. Every business we own has one named owner who holds a number." },
+        { "n": "[02]", "title": "Assets before income.", "body": "Money that arrives this month is useful. Something that keeps producing after you stop pushing it is worth far more. Every decision is judged on which one it is." },
+        { "n": "[03]", "title": "Hiring is gated on revenue already earned.", "body": "No appointment is made against a forecast. Each phase unlocks only once the revenue that pays for it has arrived and held." },
+        { "n": "[04]", "title": "Slow on purpose.", "body": "We would rather own two good businesses than six average ones, and we will wait for the right person rather than fill a seat." }
+      ]
+    },
+    "partner": {
+      "title": "What we would want from a partner.",
+      "body": [
+        "Patience, and somebody who has built something in a market like this one. Capital alone is not the constraint — the next twelve months are funded.",
+        "We are looking for a person we would still want on the register in ten years."
+      ]
+    },
+    "closer": {
+      "title": "We are not raising today.",
+      "body": "The current plan is funded by the company and its shareholders. When that changes, the financials, the register and the contracts will sit in a data room — not on a website — and this page will say so.",
+      "disclaimer": "Nothing on this page is an offer of securities or an invitation to invest."
+    }
+  },
+
+  "contact": {
+    "title": "Contact — Biiyond",
+    "label": "Contact",
+    "headline": "Which door is which.",
+    "rows": [
+      { "k": "General", "type": "email", "v": "general" },
+      { "k": "Working here", "type": "email", "v": "careers" },
+      { "k": "Working with Leafcut Studio", "type": "ext", "prefix": "Client enquiries are handled at", "v": "leafcutStudio" },
+      { "k": "Studying at Leafcut Academy", "type": "ext", "prefix": "Course enquiries are handled at", "v": "leafcutAcademy" },
+      { "k": "Office", "type": "office" }
+    ]
+  },
+
+  "footer": {
+    "underTheName": "Under the name",
+    "madeIn": "Made in Nepal"
+  }
+}

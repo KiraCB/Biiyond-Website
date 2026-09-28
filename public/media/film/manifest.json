@@ -1,0 +1,56 @@
+{
+  "count": 382,
+  "clips": [
+    {
+      "id": "A",
+      "file": "A-line-to-ridge.mp4",
+      "fps": 14,
+      "start": 0,
+      "frames": 141
+    },
+    {
+      "id": "B",
+      "file": "B-first-light.mp4",
+      "fps": 11,
+      "start": 141,
+      "frames": 110
+    },
+    {
+      "id": "C",
+      "file": "C-above-the-clouds.mp4",
+      "fps": 13,
+      "start": 251,
+      "frames": 131
+    }
+  ],
+  "lineY": 0.383,
+  "sets": {
+    "landscape": {
+      "path": "media/film/l/",
+      "prefix": "f-",
+      "ext": ".webp",
+      "pad": 4,
+      "width": 1600,
+      "height": 900,
+      "focus": [
+        0.645,
+        0.4
+      ],
+      "bytes": 3898658
+    },
+    "portrait": {
+      "path": "media/film/p/",
+      "prefix": "f-",
+      "ext": ".webp",
+      "pad": 4,
+      "width": 640,
+      "height": 960,
+      "focus": [
+        0.5,
+        0.4
+      ],
+      "bytes": 2000658
+    }
+  },
+  "grade": "colorbalance=rs=0.025:gs=-0.005:bs=-0.04:bm=-0.025,eq=saturation=0.8"
+}
