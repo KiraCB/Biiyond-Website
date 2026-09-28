@@ -22,6 +22,10 @@ const m = JSON.parse(readFileSync(manifestPath, 'utf8'));
 
 /* ---------- film timeline: content beats → global frame indices ---------- */
 const clip = Object.fromEntries(m.clips.map((x) => [x.id, x]));
+// LANDSCAPE_ONLY=1 drops the portrait frame set (used for file-count-limited previews;
+// phones then crop the landscape frames instead).
+const landscapeOnly = !!process.env.LANDSCAPE_ONLY;
+if (landscapeOnly) m.sets = { landscape: m.sets.landscape };
 const film = {
   count: m.count,
   travel: c.home.film.travel,
@@ -44,13 +48,16 @@ if (Math.abs(film.beats.at(-1).to - film.travel) > 1e-6) throw new Error('last b
 rmSync(DIST, { recursive: true, force: true });
 mkdirSync(join(DIST, 'assets'), { recursive: true });
 cpSync(join(ROOT, 'public'), DIST, { recursive: true });
+if (landscapeOnly) rmSync(join(DIST, 'media/film/p'), { recursive: true, force: true });
 cpSync(join(ROOT, 'src/css/site.css'), join(DIST, 'assets/site.css'));
 cpSync(join(ROOT, 'src/js/site.js'), join(DIST, 'assets/site.js'));
 cpSync(join(ROOT, 'src/js/film.js'), join(DIST, 'assets/film.js'));
 
 const pages = [
   { path: '', active: '', title: c.home.title, render: (o) => P.home(c, { ...o, film }),
-    head: (root) => `<link rel="preload" as="image" href="${root}${m.sets.landscape.path}f-0000.webp" media="(orientation: landscape)">\n<link rel="preload" as="image" href="${root}${m.sets.portrait.path}f-0000.webp" media="(orientation: portrait)">`,
+    head: (root) => m.sets.portrait
+      ? `<link rel="preload" as="image" href="${root}${m.sets.landscape.path}f-0000.webp" media="(orientation: landscape)">\n<link rel="preload" as="image" href="${root}${m.sets.portrait.path}f-0000.webp" media="(orientation: portrait)">`
+      : `<link rel="preload" as="image" href="${root}${m.sets.landscape.path}f-0000.webp">`,
     scripts: (root) => `<script src="${root}assets/film.js" defer></script>` },
   { path: 'thinking/', active: 'thinking/', title: c.thinking.title, render: (o) => P.thinking(c, o) },
   { path: 'careers/', active: 'careers/', title: c.careers.title, render: (o) => P.careers(c, o) },
@@ -96,7 +103,8 @@ const tbc = [];
 })(c, '');
 
 console.log(`built ${pages.length} pages + style tile → ${DIST.replace(ROOT + '/', '')}${preview ? ' (preview)' : ''}`);
-console.log(`film: ${m.count} frames, ${film.travel} vh of pinned scroll, ${(m.sets.landscape.bytes / 1e6).toFixed(1)} MB landscape / ${(m.sets.portrait.bytes / 1e6).toFixed(1)} MB portrait`);
+console.log(`film: ${m.count} frames, ${film.travel} vh of pinned scroll, ` +
+  Object.entries(m.sets).map(([k, s]) => `${(s.bytes / 1e6).toFixed(1)} MB ${k}`).join(' / '));
 if (tbc.length) console.warn(`\n⚠ ${tbc.length} item(s) to confirm before launch:\n  ` + tbc.join('\n  '));
 const pending = Object.entries(c.site.external).filter(([, v]) => !v.live).map(([k]) => k);
 if (pending.length) console.warn(`⚠ external links held until live: ${pending.join(', ')}`);
